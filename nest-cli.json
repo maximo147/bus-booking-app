@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json.schemastore.org/nest-cli",
+  "collection": "@nestjs/schematics",
+  "sourceRoot": "apps/bus-booking-app/src",
+  "compilerOptions": {
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/bus-booking-app/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/bus-booking-app",
+  "projects": {
+    "bus-booking-app": {
+      "type": "application",
+      "root": "apps/bus-booking-app",
+      "entryFile": "main",
+      "sourceRoot": "apps/bus-booking-app/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/bus-booking-app/tsconfig.app.json"
+      }
+    },
+    "buses-service": {
+      "type": "application",
+      "root": "apps/buses-service",
+      "entryFile": "main",
+      "sourceRoot": "apps/buses-service/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/buses-service/tsconfig.app.json"
+      }
+    }
+  }
+}

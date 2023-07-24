@@ -1,0 +1,103 @@
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>260</x><y>380</y><w>190</w><h>170</h></coordinates><panel_attributes>Bus
+--
+id_bus: string (PK)
+min_seat: number
+max:_seat: number
+amount_tourist: number
+amount_executive: number
+amount_premium: number
+state: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>250</x><y>130</y><w>190</w><h>140</h></coordinates><panel_attributes>Type_Seat
+--
+id_type_seat: string (PK)
+name: string
+serviceAdditional: string
+costAdditional
+id_bus: string (FK)
+state: boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>540</x><y>170</y><w>210</w><h>160</h></coordinates><panel_attributes>Itinerary
+--
+id_itinerary: string
+city_origin: string
+city_destination: string
+hour_exit: date
+hour_arrival: date
+cost: double
+id_bus: string (FK)
+state: boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>310</y><w>160</w><h>130</h></coordinates><panel_attributes>User
+--
+id_user: string (PK)
+name: string
+lastname: string
+datebirthday: date
+id_role: string (FK)
+state: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>820</x><y>150</y><w>140</w><h>100</h></coordinates><panel_attributes>Role
+--
+id_role: string (PK)
+name: string 
+description: string
+state: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>530</x><y>450</y><w>190</w><h>140</h></coordinates><panel_attributes>Booking
+--
+id_booking: string (PK)
+id_user: string
+id_itinerary: string
+date_booking: date
+cost_total: double
+state: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>270</x><y>610</y><w>180</w><h>140</h></coordinates><panel_attributes>Chat
+--
+id_chat: string (PK)
+id_transmitter: string (FK)
+id_receiver: string (FK)
+message: string
+group: string
+date_sent: date</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>260</y><w>40</w><h>140</h></coordinates><panel_attributes>lt=-
+m1=m
+m2=1
+</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>440</x><y>230</y><w>120</w><h>270</h></coordinates><panel_attributes>lt=-
+m1=m
+m2=1
+</panel_attributes><additional_attributes>100;10;50;10;50;240;10;240</additional_attributes></element><element><id>Relation</id><coordinates><x>870</x><y>240</y><w>50</w><h>90</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>550</y><w>110</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=m
+</panel_attributes><additional_attributes>10;20;90;20</additional_attributes></element><element><id>Relation</id><coordinates><x>640</x><y>320</y><w>40</w><h>150</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=m
+</panel_attributes><additional_attributes>10;10;10;130</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>380</y><w>640</w><h>460</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes><additional_attributes>10;370;10;440;620;440;620;10;560;10</additional_attributes></element><element><id>Relation</id><coordinates><x>370</x><y>350</y><w>710</w><h>510</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes><additional_attributes>10;400;10;490;690;490;690;10;600;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>800</x><y>480</y><w>180</w><h>120</h></coordinates><panel_attributes>Booking_Details
+--
+id_booking_details: string (PK)
+id_booking: string (FK)
+id_user: string (FK)
+date: date
+status: 
+state: boolean</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>960</x><y>410</y><w>70</w><h>190</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+</panel_attributes><additional_attributes>10;10;50;10;50;160;20;160</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>380</y><w>170</w><h>130</h></coordinates><panel_attributes>Type_Seat_Detail
+--
+id_ type_seat_detail: string (PK)
+id_type_seat: string (FK)
+id_bus: string (FK)
+busy: boolean
+state: boolean
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>90</x><y>200</y><w>180</w><h>200</h></coordinates><panel_attributes>lt=-
+m1=m
+m2=1
+</panel_attributes><additional_attributes>10;180;10;10;160;10</additional_attributes></element><element><id>Relation</id><coordinates><x>160</x><y>430</y><w>120</w><h>50</h></coordinates><panel_attributes>lt=-
+m1=1
+m2=m
+</panel_attributes><additional_attributes>100;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>990</x><y>180</y><w>160</w><h>100</h></coordinates><panel_attributes>Login
+--
+id_login: string
+id_user: string
+token: string
+
+</panel_attributes><additional_attributes></additional_attributes></element></diagram>
